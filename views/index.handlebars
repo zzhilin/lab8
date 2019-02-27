@@ -15,7 +15,6 @@
   <script src="/js/canvas-to-blob.min.js"></script>
   <script src="/js/introHCI.js"></script>
   <script src="/js/camera.js"></script>
-  <script src="/js/mapQuest.js"></script>
 
   <!-- this is a comment in HTML -->
 
@@ -75,9 +74,30 @@
     <hr>
 
     <div id="rsvp">
+      
+      <div class="row">
+        <div class="col">
+          <label for="">Your Photo</label>
+        </div>
+      </div>
+      <div class="row">
+       <!--  <div class="col-6">
+          <div id="camera" class="profile" style="max-width: 250px;">
+            <video autoplay id="camera-video"></video>
+            <button id="camera-button" class="btn btn-primary">Take Photo</button>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <canvas id="camera-canvas"></canvas>
+        </div>
+        -->
+      </div>
+
       <h3>RSVP Form</h3>
       <div class="row">
-        <div class="col-4">
+
+        <div class="col-12">
           <form id="rsvpForm">
             <div class="form-group">
               <label for="rsvpEmail">Email address</label>
@@ -90,24 +110,6 @@
             </div>
             <button type="submit" class="btn btn-primary">RSVP Now</button>
           </form>
-        </div>
-        <div class="col-8">
-
-          <div class="row">
-            <label for="">Your Photo</label>
-            
-           <!--  <div class="col">
-              <div id="camera" class="profile" style="max-width: 250px;">
-                <video autoplay id="camera-video"></video>
-                <button id="camera-button" class="btn btn-primary">Take Photo</button>
-              </div>
-            </div>
-
-            <div class="col">
-              <canvas id="camera-canvas"></canvas>
-            </div>
-            -->
-          </div>
         </div>
       </div>
       <br>

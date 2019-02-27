@@ -65,8 +65,8 @@ html, body, .container {
 
 #camera-canvas {
     object-fit: cover;
-    width: 200px;
-    height: 200px;
+    /*width: 200px;
+    height: 200px;*/
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
     -moz-transform:rotateY(180deg); /* Firefox */

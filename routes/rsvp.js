@@ -5,6 +5,6 @@ var data = {
 /*
  * GET tasks page.
  */
-exports.adminView = function(req, res){
-  res.render('rsvp', data);
+exports.adminView = function(request, response){
+  response.render('rsvp', data);
 };
