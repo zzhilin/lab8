@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -33,16 +32,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+	app.use(express.errorHandler());
 }
 
 // Add routes here
 app.get('/', index.view);
 app.get('/rsvp', rsvp.adminView);
-
+app.post('/addRSVP', rsvp.addRSVP);
 // Example route
 // app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function() {
+	console.log('Express server listening on port ' + app.get('port'));
 });

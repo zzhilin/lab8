@@ -2,32 +2,34 @@
 
 <html>
 <head>
-  <title>IxD Final Presentation</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="/css/introHCI.css" rel="stylesheet">
-  <script src="/js/canvas-to-blob.min.js"></script>
-  <script src="/js/introHCI.js"></script>
-  <script src="/js/camera.js"></script>
-
-  <!-- this is a comment in HTML -->
+    <title>IxD Final Presentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/css/introHCI.css" rel="stylesheet">
+    {{!-- <script src="/js/canvas-to-blob.min.js"></script> --}}
+    <script src="/js/introHCI.js"></script>
+    <script src="/js/camera.js"></script>
+    {{!-- mapquest --}}
+    <script src="/js/mapQuest.js"></script>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest-maps.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-  <div id="pageone" class="container">
+    <div id="pageone" class="container">
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
     <!-- p means paragraph -->
     <div class="jumbotron">
@@ -36,85 +38,84 @@
     </div>
 
     <div id="mapQuest" class="profile">
-      <h3>Event Location</h3>
-      <div id="map" style="max-height: 400px;"></div>
+        <h3>Event Location</h3>
+        <div id="map" style="max-height: 400px;"></div>
     </div> 
 
     <hr>
 
     <div id="judges">
-      <h3>Judges</h3>
-      <div class="row">
+        <h3>Judges</h3>
+        <div class="row">
         <div class="col">
-          <img class="judge-img" id="don" src="https://media.nngroup.com/media/people/photos/DonNorman2003-3.jpg.400x400_q95_autocrop_crop_upscale.jpg" style="max-width: 300px"/>
-          <br/>
-          <br/>
-          <h5>Don Norman</h5>
-          <p id="don-bio" style="display: none">Donald Arthur "Don" Norman is the director of The Design Lab at University of California, San Diego.</p>
+            <img class="judge-img" id="don" src="https://media.nngroup.com/media/people/photos/DonNorman2003-3.jpg.400x400_q95_autocrop_crop_upscale.jpg" style="max-width: 300px"/>
+            <br/>
+            <br/>
+            <h5>Don Norman</h5>
+            <p id="don-bio" style="display: none">Donald Arthur "Don" Norman is the director of The Design Lab at University of California, San Diego.</p>
         </div>
         <div class="col">
-          <img class="judge-img" id="scott" src="https://d.ucsd.edu/srk/images/scott-2014-largeZoomed.jpg" style="max-width: 300px"/>
-          <br/>
-          <br/>
-          <h5>Scott Klemmer</h5>
-          <p id="scott-bio" style="display: none">Scott is a Professor of Cognitive Science and Computer Science and Engineering at UC San Diego, where he co-founded the Design Lab.</p>
-          <br/>
+            <img class="judge-img" id="scott" src="https://d.ucsd.edu/srk/images/scott-2014-largeZoomed.jpg" style="max-width: 300px"/>
+            <br/>
+            <br/>
+            <h5>Scott Klemmer</h5>
+            <p id="scott-bio" style="display: none">Scott is a Professor of Cognitive Science and Computer Science and Engineering at UC San Diego, where he co-founded the Design Lab.</p>
+            <br/>
         </div>
         <div class="col">
-          <img class="judge-img" id="michael" src="https://cap.stanford.edu/profiles/viewImage?profileId=41538&type=square&ts=1509523290917" style="max-width: 300px"/>
-          <br/>
-          <br/>
-          <h5>Michael Bernstein</h5>
-          <p id="michael-bio" style="display: none">Michael Bernstein is an Assistant Professor of Computer Science at Stanford University, where he is a member of the Human-Computer Interaction group.</p>
-          <br/>
+            <img class="judge-img" id="michael" src="https://cap.stanford.edu/profiles/viewImage?profileId=41538&type=square&ts=1509523290917" style="max-width: 300px"/>
+            <br/>
+            <br/>
+            <h5>Michael Bernstein</h5>
+            <p id="michael-bio" style="display: none">Michael Bernstein is an Assistant Professor of Computer Science at Stanford University, where he is a member of the Human-Computer Interaction group.</p>
+            <br/>
         </div>
-      </div>
+        </div>
     </div>
 
     <hr>
 
     <div id="rsvp">
-      
-      <div class="row">
-        <div class="col">
-          <label for="">Your Photo</label>
+        
+        <div class="row">
+            <div class="col">
+                <label for="">Your Photo</label>
+            </div>
         </div>
-      </div>
-      <div class="row">
-       <!--  <div class="col-6">
-          <div id="camera" class="profile" style="max-width: 250px;">
-            <video autoplay id="camera-video"></video>
-            <button id="camera-button" class="btn btn-primary">Take Photo</button>
-          </div>
+        <div class="row">
+            <div class="col-6">
+                <div id="camera" class="profile" style="max-width: 250px;">
+                <video autoplay id="camera-video"></video>
+                <button id="camera-button" class="btn btn-primary">Take Photo</button>
+            </div>
         </div>
 
         <div class="col-6">
-          <canvas id="camera-canvas"></canvas>
+            <canvas id="camera-canvas"></canvas>
         </div>
-        -->
-      </div>
+    </div>
 
-      <h3>RSVP Form</h3>
-      <div class="row">
+        <h3>RSVP Form</h3>
+        <div class="row">
 
         <div class="col-12">
-          <form id="rsvpForm">
+            <form id="rsvpForm">
             <div class="form-group">
-              <label for="rsvpEmail">Email address</label>
-              <input required type="email" class="form-control" id="rsvpEmail" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="rsvpEmail">Email address</label>
+                <input required type="email" class="form-control" id="rsvpEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-              <label for="rsvpExcited">Are you excited? </label>
-              <input required type="name" id="rsvpExcited" class="form-control" placeholder="">
+                <label for="rsvpExcited">Are you excited? </label>
+                <input required type="name" id="rsvpExcited" class="form-control" placeholder="">
             </div>
             <button type="submit" class="btn btn-primary">RSVP Now</button>
-          </form>
+            </form>
         </div>
-      </div>
-      <br>
-      
+        </div>
+        <br>
+        
     </div>
-  </div>
+    </div>
 </body>
 </html>
